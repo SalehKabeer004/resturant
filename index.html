@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let menu = ["biryani", "pizza"];
+        let order = prompt("What do you want to eat? (biryani/pizza)").toLocaleLowerCase();
+        if (order === "biryani") {
+            let type = prompt("Chicken or Beef?").toLocaleLowerCase();
+            let size = prompt("Small, Medium, or Large?").toLocaleLowerCase();
+            let price;
+            if (type === "chicken") {
+                if (size === "small") {
+                    price = 200;
+                } else if (size === "medium") {
+                    price = 350;
+                } else if (size === "large") {
+                    price = 500;
+                }
+            } else if (type === "beef") {
+                if (size === "small") {
+                    price = 250;
+                } else if (size === "medium") {
+                    price = 400;
+                } else if (size === "large") {
+                    price = 550;
+                }
+            }
+            alert(`You ordered ${size} ${type} Biryani. Price: ${price}`);
+        } else if (order === "pizza") {
+            let type = prompt("Chicken or Beef?").toLocaleLowerCase();
+            let size = prompt("Small, Medium, or Large?").toLocaleLowerCase();
+            let flavour = prompt("Fajita, Seekh, or Chicken Tikka?").toLocaleLowerCase();
+            let price;
+            if (type === "chicken") {
+                if (size === "small") {
+                    price = 300;
+                } else if (size === "medium") {
+                    price = 450;
+                } else if (size === "large") {
+                    price = 600;
+                }
+            } else if (type === "beef") {
+                if (size === "small") {
+                    price = 350;
+                } else if (size === "medium") {
+                    price = 500;
+                } else if (size === "large") {
+                    price = 650;
+                }
+            }
+            alert(`You ordered ${size} ${flavour} ${type} Pizza. Price: ${price}`);
+        } else {
+            alert("Sorry, we don't have that item.");
+        }
+    </script>
+</body>
+</html>
